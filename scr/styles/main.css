@@ -1,0 +1,117 @@
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fc1e8a;
+  user-select: none;
+}
+.menu{
+    display: flex;
+    color: #ffffff;
+    background-color: #000000;
+    text-transform: uppercase;
+    min-height: 15vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+}
+.titulo{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+.data2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(
+    325deg,
+    #03001e 0%,
+    #7303c0 30%,
+    #ec38bc 70%,
+    #fdeff9 100%
+  );
+  min-height: 85vh;
+  
+    
+}
+.item{
+    justify-content: center;
+    display: flex;
+    border: 1px solid #000000;
+    align-items: center;
+    font-size: 3rem;
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    user-select: none;
+  }
+  
+  .item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #404040;
+    /*opacity: 0.85;*/ 
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+  }
+  .item.boxOpen{
+    transform: rotateY(0deg);
+  }
+
+  .boxOpen::after,
+  .boxMatch::after {
+    transform: rotateY(180deg);
+  }
+
+.game {
+    margin-top: 50px;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+  }
+  .reset {
+    padding: 15px 20px;
+    width: 430px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .reset:hover {
+    color: #262809;
+    background-color: #ec38bc;
+    
+  }
+  
+  .reset:focus {
+    color: #ec38bc;
+    background-color: #262809;
+  }
